@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class JTVDownload extends JFrame implements ItemListener
+public class JTVDownload2 extends JFrame implements ItemListener
 {
     JComboBox<String> programBox = new JComboBox<String>();
     JLabel programList = new JLabel("                Program List               ");
@@ -17,24 +17,24 @@ public class JTVDownload extends JFrame implements ItemListener
             "Comedy in local government office",
             "Family comedy with meddling in-laws"};
 
-    public JTVDownload()
+    public JTVDownload2()
     {
         super("JTVDownload");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new FlowLayout());
         programBox.addItemListener(this);
-
         add(programList);
         programBox.addItem("none");
         for(int x = 0; x < progs.length; ++x)
             programBox.addItem(progs[x]);
         add(programBox);
+        programBox.setEditable(true);
         add(descripField);
     }
 
     public static void main(String[] arguments)
     {
-        JTVDownload frame = new JTVDownload();
+        JTVDownload2 frame = new JTVDownload2();
         frame.setSize(500,250);
         frame.setVisible(true);
     }
@@ -46,7 +46,14 @@ public class JTVDownload extends JFrame implements ItemListener
         if(source == programBox)
         {
             int num = programBox.getSelectedIndex();
-            descripField.setText(descrips[num]);
+            try
+            {
+                descripField.setText(descrips[num]);
+            }
+            catch(ArrayIndexOutOfBoundsException e)
+            {
+                descripField.setText("Sorry - request not recognized");
+            }
         }
     }
 }
