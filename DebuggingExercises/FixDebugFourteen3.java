@@ -2,7 +2,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-public class DebugFourteen3 extends JFrame implements ItemListener
+public class FixDebugFourteen3 extends JFrame implements ItemListener
 {
    FlowLayout flow = new FlowLayout();
    JComboBox pizzaBox = new JComboBox();
@@ -14,7 +14,7 @@ public class DebugFourteen3 extends JFrame implements ItemListener
    String output;
    int pizzaNum;
 
-   public DebugFourteen3()
+   public FixDebugFourteen3()
    {
       super("Pizza List");
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -34,7 +34,7 @@ public class DebugFourteen3 extends JFrame implements ItemListener
    }
    public static void main(String[] arguments)
    {
-      JFrame frame = new DebugFourteen3();
+      JFrame frame = new FixDebugFourteen3();
       frame.setSize(200, 150);
       frame.setVisible(true);
    }

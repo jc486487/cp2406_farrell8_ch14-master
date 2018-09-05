@@ -6,7 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class DebugFourteen2 extends JFrame implements ItemListener
+public class FixDebugFourteen2 extends JFrame implements ItemListener
 {
    FlowLayout flow = new FlowLayout();
    JComboBox<String> payMethod = new JComboBox<String>();
@@ -18,7 +18,7 @@ public class DebugFourteen2 extends JFrame implements ItemListener
    String output;
    int fee = 0;
 
-   public DebugFourteen2()
+   public FixDebugFourteen2()
    {
       super("Pay List");
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -33,7 +33,7 @@ public class DebugFourteen2 extends JFrame implements ItemListener
    }
    public static void main(String[] arguments)
    {
-      JFrame cframe = new DebugFourteen2();
+      JFrame cframe = new FixDebugFourteen2();
       cframe.setSize(350,150);
       cframe.setVisible(true);
    }

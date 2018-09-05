@@ -5,7 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class DebugFourteen4 extends JFrame implements ItemListener
+public class FixDebugFourteen4 extends JFrame implements ItemListener
 {
    FlowLayout flow = new FlowLayout();
    String title = new String("Beverage Selector");
@@ -22,7 +22,7 @@ public class DebugFourteen4 extends JFrame implements ItemListener
    final int HIGH_PRICE = 3;
    final int LOW_PRICE = 2;
 
-   public DebugFourteen4()
+   public FixDebugFourteen4()
    {
       super("Beverage Selector");
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -44,7 +44,7 @@ public class DebugFourteen4 extends JFrame implements ItemListener
    }
    public static void main(String[] arguments)
    {
-      JFrame bFrame = new DebugFourteen4();
+      JFrame bFrame = new FixDebugFourteen4();
       bFrame.setSize(350, 100);
       bFrame.setVisible(true);
    } 
